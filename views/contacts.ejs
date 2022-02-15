@@ -1,0 +1,39 @@
+<%- include('include/head.ejs') %>
+</head>
+<body>
+    <%- include('include/navbar.ejs') %>
+    <main>
+        <div class="container">
+        <h1><%= pageTitle %></h1>
+        <br>
+        <% if(contacts.length > 0) { %>
+        <!-- <p>The items in the wishlist are listed as follows...</p> -->
+        <div class="grid">
+            <table class="contactTable">
+                <tr>
+                    <th><div id="First Name"> <%= contactFirstName %></div></th>
+                    <th><div id="Last Name"> <%= contactLastName %></div></th>
+                    <th><div id="Telephone number"><%= contactPhoneNumber %></div></th>
+                </tr>
+            <% for(let contact of contacts) { %>
+
+                    <tr>
+                      <td><div id="firstname"> <%= contact.fName %></div></td>
+                      <td><div id="lastname"> <%= contact.lName %></div></td>
+                      <td><div id="phonenumber"><%= contact.phoneNumber %></div></td>
+                    </tr>
+
+            <% } %>
+        </table>
+
+        </div> 
+        <% } else { %>
+            <div style="color: salmon;">
+                <h1>Your Phonebook is empty at the moment</h1>
+            </div>
+        <% } %>
+        </div>
+        <%- include ('include/footer.ejs') %>
+    </main>
+       
+<%- include('include/end.ejs') %>
