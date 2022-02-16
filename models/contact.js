@@ -21,7 +21,7 @@ module.exports = class Contact {
             if(!error){
                 contacts = JSON.parse(fileContent);
             }
-            wishes.push(this);
+            contacts.push(this);
 
             fs.writeFile(dataPath, JSON.stringify(contacts), (error) => {
                 console.log(error);

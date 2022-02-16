@@ -1,0 +1,13 @@
+<nav>
+
+    <ul>
+        <div class="siteTitle">
+            Kald's Phonebook
+        </div>
+    <% for (var i=0; i < navItemArray.length; i++) { %>
+
+        <li><a href= <%= navItemArray[i].url %>><%= navItemArray[i].title %></a></li>
+
+    <% } %>
+    </ul>
+</nav>
