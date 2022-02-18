@@ -54,3 +54,8 @@ exports.getContacts = (req, res) => {
     })
 
 }
+exports.postDeleteContact = (req, res) => {
+    const contactToDelete = req.body.phoneNumber;
+    Contact.deleteByPhoneNumber(contactToDelete);
+    res.redirect('/');
+}

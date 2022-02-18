@@ -14,6 +14,7 @@
                     <th><div id="First Name"> <%= contactFirstName %></div></th>
                     <th><div id="Last Name"> <%= contactLastName %></div></th>
                     <th><div id="Telephone number"><%= contactPhoneNumber %></div></th>
+                    <th></th>
                 </tr>
             <% for(let contact of contacts) { %>
 
@@ -21,6 +22,10 @@
                       <td><div id="firstname"> <%= contact.fName %></div></td>
                       <td><div id="lastname"> <%= contact.lName %></div></td>
                       <td><div id="phonenumber"><%= contact.phoneNumber %></div></td>
+                      <td><form action="/delete-contact" method="POST">
+                        <input type="hidden" value="<%= contact.phoneNumber %>" name="phoneNumber">  
+                        <button class="btn" type="submit">Delete</button>
+                      </form></td>
                     </tr>
 
             <% } %>

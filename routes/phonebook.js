@@ -6,5 +6,6 @@ const contactCreatorData = require('./addcontact');
 const router = express.Router();
 
 router.get('/', phonebookcontroller.getContacts);
+router.post('/delete-contact', phonebookcontroller.postDeleteContact);
 
 module.exports = router;
