@@ -444,6 +444,10 @@ button[type=submit] {
     /* box-shadow: 1px 3px 10px 2px #888888; */
 
 }
+#btn svg{
+    height: 24em;
+    
+}
 button[type=submit]:hover{
     background-color: cadetblue;
     color: whitesmoke;

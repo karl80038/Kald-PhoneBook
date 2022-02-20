@@ -4,7 +4,8 @@
     <%- include('include/navbar.ejs') %>
     <main>
         <div class="container">
-            <h1><%= pageTitle %></h1>
+            <h1 class="fa-solid fa-phone"><%= pageTitle %></h1>
+            <br>
             <form class="contact-form" action="/new-contact" method="post">
             <table class="form-control">
                 <tr>
@@ -32,7 +33,10 @@
                     <td></td>
                 </tr>
             </table>
-            <button class="btn" type="submit">Add Contact</button>    
+            
+            <button class="btn" type="submit">
+                Add Contact
+            </button>    
             </form>
         </div>
 
